@@ -1,0 +1,126 @@
+.menuBar {
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menuLogo {
+    flex-basis: auto;
+}
+
+.menuCompanyText {
+    color: #fff;
+    font-size: 6em;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: cinematografia, serif;
+    letter-spacing: 4px;
+    line-height: 0;
+    margin: 0;/*span*/
+}
+
+.menuCompanyText::before {
+    content: url('../img/logo/logoMenu.png');
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav {
+    flex-basis: 100%;
+    background: #3f4952;
+}
+
+nav ul li a,
+nav ul li a:hover {
+    border-radius: 4px;
+}
+
+nav ul li a {
+    width: 100%;
+    display: inline-block;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .75em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: sans-serif, serif;
+    border: 1px solid #3f4952;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+   background: #2c333a;
+   border: 1px solid #374048;
+}
+
+nav ul li a:hover {
+    transition: all 0.2s ease-in;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    background: #3f4952;
+    display: none;
+    position: absolute;
+    z-index: 101;
+    left: 0;
+    top: 100%;
+    border: 1px solid #374048;
+    list-style: none;
+}
+
+.dropdown-content a {
+    float: none;
+    display: block;
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid #374048;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    border: 1px solid #3f4952;
+}
+
+.show {
+    display: block;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+    .menuCompanyText {
+        font-size: 4em;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .menuBar {
+        margin: 0 .75em;
+        flex-wrap: nowrap;
+    }
+
+    .menuCompanyText {
+        font-size: 4.1em;
+    }
+
+    nav {
+        flex-basis: auto;
+    }
+
+    nav > ul > li {
+        display: inline-block;
+    }
+}

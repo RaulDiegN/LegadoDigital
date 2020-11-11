@@ -1,0 +1,4 @@
+config.php
+
+# PhpStorm User-specific stuff
+/.idea/*
